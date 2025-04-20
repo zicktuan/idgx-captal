@@ -1,0 +1,622 @@
+{
+    "props": {
+        "pageProps": {
+            "layout": {
+                "header": {
+                    "desktopLinks": [{
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "8a0be9a1-8ab7-4a76-9d11-5b0d2636b14e",
+                            "_type": "reference"
+                        },
+                        "_key": "426608038e76",
+                        "openInNewWindow": null,
+                        "title": null,
+                        "pageName": "About",
+                        "slug": "about"
+                    }, {
+                        "url": "/team",
+                        "_type": "link",
+                        "openInNewWindow": null,
+                        "_key": "ff5f78089e91",
+                        "title": "Team"
+                    }, {
+                        "_type": "pageLink",
+                        "openInNewWindow": null,
+                        "title": null,
+                        "pageName": "Portfolio",
+                        "slug": "portfolio",
+                        "page": {
+                            "_ref": "5413381f-bafa-4f3e-bba8-91d912b8db45",
+                            "_type": "reference"
+                        },
+                        "_key": "38b3cd4525de"
+                    }, {
+                        "openInNewWindow": null,
+                        "_type": "link",
+                        "_key": "22b86a453ca1",
+                        "title": "Writing",
+                        "url": "/writing"
+                    }, {
+                        "slug": "oss",
+                        "openInNewWindow": null,
+                        "page": {
+                            "_ref": "cd2cf7f4-c943-4bfe-928b-ee045fba8a9f",
+                            "_type": "reference"
+                        },
+                        "_key": "cd5b2c9fbd5f",
+                        "_type": "pageLink",
+                        "title": null,
+                        "pageName": "Open Source"
+                    }, {
+                        "url": "/careers",
+                        "openInNewWindow": null,
+                        "_type": "link",
+                        "_key": "05b4198b2e14",
+                        "title": "Careers"
+                    }],
+                    "mobileLinks": [{
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "8a0be9a1-8ab7-4a76-9d11-5b0d2636b14e",
+                            "_type": "reference"
+                        },
+                        "_key": "ad3cf4299bd8",
+                        "slug": "about",
+                        "openInNewWindow": null,
+                        "title": null,
+                        "pageName": "About"
+                    }, {
+                        "url": "/team",
+                        "_type": "link",
+                        "_key": "cdc21cfec068",
+                        "title": "Team",
+                        "openInNewWindow": null
+                    }, {
+                        "pageName": "Portfolio",
+                        "slug": "portfolio",
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "5413381f-bafa-4f3e-bba8-91d912b8db45",
+                            "_type": "reference"
+                        },
+                        "_key": "56f654c719a3",
+                        "openInNewWindow": null,
+                        "title": null
+                    }, {
+                        "_key": "f8ada95cbc04",
+                        "title": "Writing",
+                        "openInNewWindow": null,
+                        "url": "/writing",
+                        "_type": "link"
+                    }, {
+                        "slug": "oss",
+                        "openInNewWindow": null,
+                        "_key": "8e6834f3c151",
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "cd2cf7f4-c943-4bfe-928b-ee045fba8a9f",
+                            "_type": "reference"
+                        },
+                        "title": null,
+                        "pageName": "Open Source"
+                    }, {
+                        "_type": "link",
+                        "_key": "027927bd5b1f",
+                        "title": "Careers",
+                        "url": "/careers",
+                        "openInNewWindow": null
+                    }],
+                    "mobileSmallLinks": [{
+                        "openInNewWindow": true,
+                        "_type": "link",
+                        "_key": "8fb4f75b65fa",
+                        "title": "LP Login",
+                        "url": "https://app.junipersquare.com/i/paradigm"
+                    }],
+                    "socialLinks": [{
+                        "openInNewWindow": true,
+                        "_type": "link",
+                        "_key": "389a7a5bd2b7",
+                        "title": "Twitter",
+                        "url": "https://twitter.com/paradigm"
+                    }, {
+                        "url": "https://www.linkedin.com/company/paradigm-xyz/",
+                        "openInNewWindow": true,
+                        "_type": "link",
+                        "_key": "309ee4c0c92b",
+                        "title": "LinkedIn"
+                    }, {
+                        "_key": "caa5dd28bb8e",
+                        "title": "Warpcast",
+                        "url": "https://warpcast.com/paradigm",
+                        "openInNewWindow": true,
+                        "_type": "link"
+                    }, {
+                        "page": {
+                            "_ref": "57df6e24-c479-4932-861a-f7b349880f5f",
+                            "_type": "reference"
+                        },
+                        "_key": "c747bb27efab",
+                        "_type": "pageLink",
+                        "openInNewWindow": null,
+                        "title": null,
+                        "pageName": "Contact",
+                        "slug": "contact"
+                    }],
+                    "legalLinks": [{
+                        "page": {
+                            "_ref": "d33b5b91-90eb-4b9f-9eba-d894012bcc53",
+                            "_type": "reference"
+                        },
+                        "_key": "798f6ddf0d55",
+                        "title": "Terms",
+                        "_type": "pageLink",
+                        "openInNewWindow": null,
+                        "pageName": "Website Terms of Use",
+                        "slug": "website-terms-of-use"
+                    }, {
+                        "title": "Disclosures",
+                        "openInNewWindow": null,
+                        "pageName": "Important Disclosures",
+                        "slug": "important-disclosures",
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "c7027d0e-71a0-4bc4-b4ad-61cd2c3685a7",
+                            "_type": "reference"
+                        },
+                        "_key": "a5c485dc29ed"
+                    }, {
+                        "openInNewWindow": null,
+                        "pageName": "Privacy Policy",
+                        "slug": "privacy-policy",
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "081c96bd-e746-495c-998f-dc5e1421b55e",
+                            "_type": "reference"
+                        },
+                        "_key": "d66378d18c1a",
+                        "title": "Privacy"
+                    }, {
+                        "title": "CA Privacy",
+                        "url": "/privacy-policy#83a48e65d92d",
+                        "openInNewWindow": false,
+                        "_type": "link",
+                        "_key": "e8f366883ed3"
+                    }]
+                },
+                "footer": {
+                    "linkColumns": [{
+                        "_key": "520a97f1c3b3",
+                        "links": [{
+                            "slug": "about",
+                            "_key": "c617717bef10",
+                            "_type": "pageLink",
+                            "page": {
+                                "_ref": "8a0be9a1-8ab7-4a76-9d11-5b0d2636b14e",
+                                "_type": "reference"
+                            },
+                            "openInNewWindow": null,
+                            "title": null,
+                            "pageName": "About"
+                        }, {
+                            "pageName": "Team",
+                            "slug": "team",
+                            "_type": "pageLink",
+                            "page": {
+                                "_ref": "c0cc1f2f-202f-4d37-b5bb-dc9edb7edf62",
+                                "_type": "reference"
+                            },
+                            "_key": "445b500c20cd",
+                            "openInNewWindow": null,
+                            "title": null
+                        }, {
+                            "slug": "portfolio",
+                            "openInNewWindow": null,
+                            "title": null,
+                            "pageName": "Portfolio",
+                            "_type": "pageLink",
+                            "page": {
+                                "_ref": "5413381f-bafa-4f3e-bba8-91d912b8db45",
+                                "_type": "reference"
+                            },
+                            "_key": "ae321ba66fad"
+                        }]
+                    }, {
+                        "_key": "0d51d5f77b26",
+                        "links": [{
+                            "page": {
+                                "_ref": "c4ba5025-72c6-4c4d-a5a1-c46dfcce2cea",
+                                "_type": "reference"
+                            },
+                            "_key": "6862d607fb16",
+                            "openInNewWindow": null,
+                            "title": null,
+                            "pageName": "Writing",
+                            "slug": "writing",
+                            "_type": "pageLink"
+                        }, {
+                            "_key": "ce7b888d0e75",
+                            "_type": "pageLink",
+                            "openInNewWindow": null,
+                            "title": null,
+                            "pageName": "Open Source",
+                            "slug": "oss",
+                            "page": {
+                                "_ref": "cd2cf7f4-c943-4bfe-928b-ee045fba8a9f",
+                                "_type": "reference"
+                            }
+                        }, {
+                            "_key": "927788bfed4f",
+                            "title": "Careers",
+                            "url": "/careers",
+                            "openInNewWindow": null,
+                            "_type": "link"
+                        }]
+                    }, {
+                        "_key": "efc2b524a0f6",
+                        "links": [{
+                            "title": "LP Login",
+                            "url": "https://app.junipersquare.com/i/paradigm",
+                            "openInNewWindow": true,
+                            "_type": "link",
+                            "_key": "02f85bf11b4a"
+                        }]
+                    }],
+                    "socialLinks": [{
+                        "_key": "f325e52a9ec5",
+                        "title": "Twitter",
+                        "url": "https://twitter.com/paradigm",
+                        "openInNewWindow": true,
+                        "_type": "link"
+                    }, {
+                        "url": "https://www.linkedin.com/company/paradigm-xyz/",
+                        "openInNewWindow": true,
+                        "_type": "link",
+                        "_key": "f231f3484f95",
+                        "title": "LinkedIn"
+                    }, {
+                        "openInNewWindow": true,
+                        "_type": "link",
+                        "_key": "1c198033e797",
+                        "title": "Warpcast",
+                        "url": "https://warpcast.com/paradigm"
+                    }, {
+                        "page": {
+                            "_ref": "57df6e24-c479-4932-861a-f7b349880f5f",
+                            "_type": "reference"
+                        },
+                        "_key": "d8394a8a29cb",
+                        "openInNewWindow": null,
+                        "title": null,
+                        "pageName": "Contact",
+                        "slug": "contact",
+                        "_type": "pageLink"
+                    }],
+                    "legalLinks": [{
+                        "page": {
+                            "_ref": "d33b5b91-90eb-4b9f-9eba-d894012bcc53",
+                            "_type": "reference"
+                        },
+                        "_key": "d6e347271e47",
+                        "title": "Terms",
+                        "openInNewWindow": null,
+                        "pageName": "Website Terms of Use",
+                        "slug": "website-terms-of-use",
+                        "_type": "pageLink"
+                    }, {
+                        "_key": "29e55cad5ff7",
+                        "title": "Disclosures",
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "c7027d0e-71a0-4bc4-b4ad-61cd2c3685a7",
+                            "_type": "reference"
+                        },
+                        "pageName": "Important Disclosures",
+                        "slug": "important-disclosures",
+                        "openInNewWindow": null
+                    }, {
+                        "pageName": "Privacy Policy",
+                        "slug": "privacy-policy",
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "081c96bd-e746-495c-998f-dc5e1421b55e",
+                            "_type": "reference"
+                        },
+                        "_key": "02e810af4cf8",
+                        "title": "Privacy",
+                        "openInNewWindow": null
+                    }, {
+                        "title": "CA Privacy",
+                        "url": "/privacy-policy#83a48e65d92d",
+                        "openInNewWindow": false,
+                        "_type": "link",
+                        "_key": "520d04d2ff65"
+                    }],
+                    "legalStatement": "Copyright © [YEAR] Paradigm Operations LP All rights reserved. “Paradigm” is a trademark, and the triangular mobius symbol is a registered trademark of Paradigm Operations LP"
+                },
+                "postDisclaimer": {
+                    "disclaimer": [{
+                        "_type": "block",
+                        "style": "normal",
+                        "_key": "45dda89c171b",
+                        "markDefs": [],
+                        "children": [{
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Disclaimer: This post is for general information purposes only. It does not constitute investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. This post reflects the current opinions of the authors and is not made on behalf of Paradigm or its affiliates and does not necessarily reflect the opinions of Paradigm, its affiliates or individuals associated with Paradigm. The opinions reflected herein are subject to change without being updated.",
+                            "_key": "da9bfb35a7960"
+                        }],
+                        "asset": null
+                    }]
+                },
+                "careersIndex": {
+                    "indexTitle": "Opportunities",
+                    "description": [{
+                        "children": [{
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Browse through careers and opportunities in the Paradigm universe.",
+                            "_key": "fdbf7aeff6590"
+                        }],
+                        "_type": "block",
+                        "style": "normal",
+                        "_key": "6663134c09b3",
+                        "asset": null,
+                        "markDefs": []
+                    }]
+                }
+            },
+            "config": {
+                "seo": {
+                    "hideFromSitemap": null,
+                    "disallowRobots": null,
+                    "metaTitle": "Paradigm",
+                    "metaKeywords": null,
+                    "openGraphTitle": "Paradigm",
+                    "openGraphDescription": "Paradigm is a research-driven crypto investment firm that funds companies and protocols from their earliest stages.",
+                    "openGraphImage": {
+                        "alt": null,
+                        "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABa0lEQVQokX1Su47CMBD0T9PQU/ML/MBVFCBRUlAgJIQUBQVOPAyBEMgLbOJc7DnZRyAEuI1W2qzXs7OzJqiY0p9Sf7FSb704E0IgCAJ4nmfcdV2QKuAd+HaxGkM9cmmawvd9bDYbrNdrzGYzkGrX8r9UErGMQX8o/NyHUOKpRgPu93vM53NMp1OMx+MHYBVUG1ccw3SI1rmFL/YFJ3MMaFGX5zmSJDEMNeBoNHqM/E4nza7N26gFNdTDOjq8g0QmT/VSSlyvVxyPRyyXSxDd5ZPwZ3lGj/fQiBpoxk0M0gGYZK+6AoatloBcLhcTFMDlTTPBYIUWul4Xfa8PGlOI7KYjXgloI3rdYRiCMWaegR6hKNI56lLY3zZsxwal1OTKeqMiF9lut2ZTu90Oh8MBnPP7YZZl0BNEYYTT6YQoiu4My0DlmKxWKywWC7Mlx3EMW82y2vm/11A2YlkWJpOJcdu2DZMy4Dv7lNeAv2hnUK/yFW33AAAAAElFTkSuQmCC",
+                        "dimensions": {
+                            "_type": "sanity.imageDimensions",
+                            "width": 2400,
+                            "aspectRatio": 1.9047619047619047,
+                            "height": 1260
+                        },
+                        "url": "https://cdn.sanity.io/images/dgybcd83/production/fd732ebeb1c4d286fd7e3b5b25395d72452edeb6-2400x1260.png",
+                        "_type": "image",
+                        "_key": null
+                    },
+                    "twitterTitle": "Paradigm",
+                    "metaDescription": "Paradigm is a research-driven crypto investment firm that funds companies and protocols from their earliest stages.",
+                    "twitterDescription": "Paradigm is a research-driven crypto investment firm that funds companies and protocols from their earliest stages.",
+                    "twitterImage": {
+                        "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABa0lEQVQokX1Su47CMBD0T9PQU/ML/MBVFCBRUlAgJIQUBQVOPAyBEMgLbOJc7DnZRyAEuI1W2qzXs7OzJqiY0p9Sf7FSb704E0IgCAJ4nmfcdV2QKuAd+HaxGkM9cmmawvd9bDYbrNdrzGYzkGrX8r9UErGMQX8o/NyHUOKpRgPu93vM53NMp1OMx+MHYBVUG1ccw3SI1rmFL/YFJ3MMaFGX5zmSJDEMNeBoNHqM/E4nza7N26gFNdTDOjq8g0QmT/VSSlyvVxyPRyyXSxDd5ZPwZ3lGj/fQiBpoxk0M0gGYZK+6AoatloBcLhcTFMDlTTPBYIUWul4Xfa8PGlOI7KYjXgloI3rdYRiCMWaegR6hKNI56lLY3zZsxwal1OTKeqMiF9lut2ZTu90Oh8MBnPP7YZZl0BNEYYTT6YQoiu4My0DlmKxWKywWC7Mlx3EMW82y2vm/11A2YlkWJpOJcdu2DZMy4Dv7lNeAv2hnUK/yFW33AAAAAElFTkSuQmCC",
+                        "dimensions": {
+                            "width": 2400,
+                            "aspectRatio": 1.9047619047619047,
+                            "height": 1260,
+                            "_type": "sanity.imageDimensions"
+                        },
+                        "url": "https://cdn.sanity.io/images/dgybcd83/production/fd732ebeb1c4d286fd7e3b5b25395d72452edeb6-2400x1260.png",
+                        "_type": "image",
+                        "_key": null,
+                        "alt": null
+                    }
+                }
+            },
+            "passwordProtection": {
+                "enablePassword": false,
+                "password": "paradigm"
+            },
+            "_type": "page",
+            "title": "Homepage",
+            "slug": "homepage",
+            "tableOfContents": null,
+            "components": [{
+                "_type": "homePage",
+                "_key": "df98460b8af4",
+                "title": "Paradigm is a research-driven crypto investment firm.",
+                "nodes": [{
+                    "_key": "8f38e13c2376",
+                    "cta": {
+                        "_key": "98a17dad2e1c",
+                        "title": null,
+                        "pageName": "Open Source",
+                        "slug": "oss",
+                        "openInNewWindow": null,
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "cd2cf7f4-c943-4bfe-928b-ee045fba8a9f",
+                            "_type": "reference"
+                        }
+                    },
+                    "subtitle": null,
+                    "description": [{
+                        "children": [{
+                            "_type": "span",
+                            "marks": [],
+                            "text": "We build software, much of it open source, that aims to advance the frontier of crypto for everyone.",
+                            "_key": "7ef7643ecce40"
+                        }],
+                        "asset": null,
+                        "_type": "block",
+                        "style": "normal",
+                        "_key": "d390f3eca9c4",
+                        "markDefs": []
+                    }],
+                    "tiles": [{
+                        "_key": "696fa8698b16",
+                        "title": "Foundry",
+                        "cta": {
+                            "_type": "link",
+                            "_key": "bfbd58f4966b",
+                            "title": "Foundry",
+                            "url": "https://book.getfoundry.sh/",
+                            "openInNewWindow": true
+                        },
+                        "image": {
+                            "dimensions": {
+                                "height": 360,
+                                "_type": "sanity.imageDimensions",
+                                "width": 360,
+                                "aspectRatio": 1
+                            },
+                            "url": "https://cdn.sanity.io/images/dgybcd83/production/666dd791633431efe421268d31aa1cf625469d48-360x360.png",
+                            "_type": "imageAlt",
+                            "_key": null,
+                            "alt": null,
+                            "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAADddAAA3XQEZgEZdAAACa0lEQVQ4jW3U629VVRQE8Fug7flpCy1UrNKKvISbQqEqyMMHIC1paUnAKKICBgQMWBUBxZgm8MHETyb2LzYrzmluKzfZOSfn7j1rZtbs1WmaptMurD3Rhy3++23FNryKfmzqPaNnrb30ANbmAtmJvejiOE7hCPbjzaZphpqm2bwRdCOrYjSKPXgfS/gcd/AAX+IqPsI7KTr4UoYB2xFG5/AFfsbveIaVPH/DLczjXbxRoC2p1r9N2B5Jc7ifwz/l/eusu/gBv+JR2H5QFhShwmrZiTeXsBwWy5FcRXbjLRzCWXyHp3iCr3AsTeu03SwvTuM2nqf6AqYxkj21twnwh/H1BX6J/PJ9S+tddfNypPwR/07gDA5jGAPx63C8WwjYCm7iKIZaud34UTIexpddeS4FeDrd/QQHMRW5j/FNUjHWSWinE4n683oY98eKWdzLuhKgoSRiNgS+xUmMd2JmN5XnQr2+vZJGLaTTP6bowcgfzP/nAjzTAtZ1ejutHw7QaLr7WeRcjOz5vHfTnAOYzNlStbOTahN4LTLH8F7kXQ+Dycis+HyKa0nE9zgf8NqzrQAr1K/n466Yu5hMTqfQjuzZniyWn6v4O+BTOTvQBnsoOZoJg/ORNdKT0cXYcCCersbXU/GyivW1g2FzDh4N6ERCvDUhrjj9maxW4Qu5zx+nwNp97p02gzF3X2QONE0zkib8hX8S+PHI76bjE2ns+vHVA1pMy/zypA6WjwV0I1krNgVae4pAgfWtTZuNAzadrhzW5mpUxaFMb4drW6w8WzcL/zdgN0zfuuPVrIpRMS1Wxb6KVdTagbEO8F/Tp2wu7PVMywAAAABJRU5ErkJggg=="
+                        }
+                    }, {
+                        "_key": "f02eaa4a5c116267826c6c64ae71cee4",
+                        "title": "Reth",
+                        "cta": {
+                            "title": "Reth",
+                            "url": "https://github.com/paradigmxyz/reth",
+                            "openInNewWindow": true,
+                            "_type": "link",
+                            "_key": "bfbd58f4966b"
+                        },
+                        "image": {
+                            "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAADddAAA3XQEZgEZdAAAD9ElEQVQ4jV1US0/qXBRtjVNHJjo30YkmjhXlUdpSCi1tebUiFAQBeamJcWBijI/4iiHxMXFm1JGJQ6Nx9Bn4WfacL+ug3JvbZFE4LeusvfY6mxsZGeF+r7m5OV6WZT4ejzNomsYnEgneMAzesiw+mUzy6XSaz2QyvOM47B4MBvmJiQn2/8nJyQGRrutjhmHMR6NRURAEORgMDhEKhRiwHg6HZUmSZFyRSERWVVW2LEu0bXs+m82ODZWBLJVKdXVd/5JluS+KYk+SpD6+RyKRvqIo/Wg02ldVtR+Px/uapvUTiUTPNM2+bdtf+Xy+C9Lx8XGOm52d5RVFETVN+9J1/VvTNKLrumcYhmeapmdZlpdOp71sNus5juPlcjkvn897rut6pVKJuK777TjOF5T6fD6eC4fD8EEWRRG7k2QySbPZLM3n87RSqdBqtcruQK1WoxsbG7TVatFOp0M3NzexTlKpFNTL8JtTFIVfXl6GT71YLAY1FDvv7e2R6+trhv39fdJqtcjGxga7dzodsr29DdBKpYIqeoqiwE+eQ1eXlpZAiF1QGt3d3SXPz8/k8/OTfHx8kMfHR0baaDRIs9kk7XabbG1tEShcW1uDPfB7oBCEPp8PHYXx3srKCj06OiKvr6/k/f2dvr290ZeXF3p6espK/SmZqWy327RYLHq6rqORsq7rPCdJEr+4uCgHAgFGCIV4+fz8nNzd3VHg4uICqhlZvV6nUArSZrNJC4WCh84jUsguJ4oiI/T7/YiHh6Y4jkPgY6PRYKpAsr6+zoAm1et15ifWV1dXvVgs1kdOY7HYgHBhYWFIaFkWzWQyxLZtgvJzuRzreLFYhF+0XC6DmFSrVYINHMfxkFGEX1XVQcm/hJFIhHUZL6NsxKRUKjFV8AtRgapyuUwQF5Bns1kPwUf0otHoHw9/CQuFAhpA7u/vydXVFT0+PmYe3t7e0pubG3pwcMBKhiVQnU6nPZwmECKCjBBdRlNQMhR1u10Wm6enpyHw++HhgeAZ1LuuS2BFKpUaEkYiEZ7Dxw8hwslis7OzQw4PD8nZ2RlUksvLS9b1k5MTFvharQYyAn8ty/JkWe4FAoEBIcaP3+/HJEGwCZpi2zYFMRS4rsuA8gBYgmd4BxEzTZPAw58pxXPT09PD4aBp2jdIkcd/gVOEoxmPxz1N0xBmL5FIENM0vw3D+FJVVZyZmeE5nue5eDw+bxhGV1XV/wRBgB89nBz4+jewBuCYCoLARhyEWJaF0Tc/Ojo6mIeKooxFo9H5cDgsYlDAU3QecfoXWMdznH9YJUmSqKoqhvOfAft7TU1NYfLwgiCw0Q4EAoEh8DsUCjFg7GENlv1N8j9xw4fgIAgQYwAAAABJRU5ErkJggg==",
+                            "dimensions": {
+                                "_type": "sanity.imageDimensions",
+                                "width": 360,
+                                "aspectRatio": 1,
+                                "height": 360
+                            },
+                            "url": "https://cdn.sanity.io/images/dgybcd83/production/fe67d904df367a93987042d518bfaf6f7b561d17-360x360.png",
+                            "_type": "imageAlt",
+                            "_key": null,
+                            "alt": null
+                        }
+                    }, {
+                        "_key": "0d5f3ed7f4fb8e27bcde482960e48da8",
+                        "title": "Alloy",
+                        "cta": {
+                            "_key": "bfbd58f4966b",
+                            "title": "Alloy",
+                            "url": "https://github.com/alloy-rs",
+                            "openInNewWindow": true,
+                            "_type": "link"
+                        },
+                        "image": {
+                            "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAADddAAA3XQEZgEZdAAADEklEQVQ4jX1UPUszQRC2Mjt3lwSioGiM0ajk/CAIoqbRELWwEkUkKQVBBCGFRdDO3yApLOVMwA80M8tFLCwEf4OF/0CwEcUvLF7m3M2bhGgx7O3M7nPPfOzTIoRoAYAWXrXpPa/NrPEO1MRqg60AYAkhAgBQZ9pnGEadqZgFAK2NgK1CiDgALAkhsgCQUcbfWeWrtdr4EgDENagGtBRYAQCKAOAIIarG+2YmhCiqO3yXs6sCMnX+Gx9wTdOkjo4O2dnZKS3LkkII2d7eLkdGRmQymZSTk5NyYGCAgsGgy6CKKWO06PoFVAqOz+ej7u7u8vLyMq6trWFvby8KITCRSOD+/j5eXFxgqVTCra2tciQSIZUB32WM/wzZyUFmlE6nsVgs4tnZGS0uLjITSqVSdHV1RR8fH/T09ISFQgFt25Y+n88xDCNTx1ABcvGdcDgsd3Z28P7+nh4eHmh3d5ei0SjNzs6S67r0+vpKj4+PdHBwgPF4XANmqwwbAfv7++X29jYeHx9TqVSiXC5Hg4ODNDo6Svl8no6Ojujw8JDW19eRfy5+Um4OyDUMhULStm2cmpqi6elpsm2b2traKBQKecDj4+OUSCSIa+v3+/8G1DWMRqOYTCY9wJ6eHuKuBwIBGhoaopmZGeJYJBJB0zSrgKqxP4Bq6j2GOuXz83M6OTmhjY0NZkPDw8O0t7dHlUqFuFmccldXV3OGlmV5c2iappNOp6Xruvj29uY14PT01OvwysoK3d7e0tfXFz0/P5PjODgxMSHVkGcVqTrAjGVZzvz8vLy+vsbPz098f3+ny8tLmpubo9XVVbq7u6Pv7296eXnxZpEHHH4AM6Zp/p9Dhe4NNtcpn8+XGbRSqWAul8NYLIZjY2PeYN/c3CAR4ebmZjkcDtcNdrM5LPr9fpdBmSmnH4vFvOcXDAa9p7ewsCBTqZTs6+vjZrn66dU1RUkQq0ZBHeBuO1xTLRS8Gobh+bRfCUlB3WWMKsOqfGl54po2yhbvlf0uXzVq6wmsFlJuFJsW0lo/N+BXgf1L4v+y3878A/SmUuK5VEuiAAAAAElFTkSuQmCC",
+                            "dimensions": {
+                                "aspectRatio": 1,
+                                "height": 360,
+                                "_type": "sanity.imageDimensions",
+                                "width": 360
+                            },
+                            "url": "https://cdn.sanity.io/images/dgybcd83/production/83b56e976fe9a01060e17a5d951b6857a34acac5-360x360.png",
+                            "_type": "imageAlt",
+                            "_key": null,
+                            "alt": null
+                        }
+                    }]
+                }, {
+                    "_key": "8c7a8feb94f3",
+                    "cta": {
+                        "_type": "pageLink",
+                        "page": {
+                            "_ref": "8a0be9a1-8ab7-4a76-9d11-5b0d2636b14e",
+                            "_type": "reference"
+                        },
+                        "_key": "abd15ddaf153",
+                        "slug": "about",
+                        "openInNewWindow": null,
+                        "title": null,
+                        "pageName": "About"
+                    },
+                    "subtitle": null,
+                    "description": [{
+                        "_key": "6acb8330919d",
+                        "markDefs": [],
+                        "children": [{
+                            "_key": "5323e7caa9630",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Paradigm is a research-driven crypto investment firm that funds companies and protocols from their earliest stages."
+                        }],
+                        "_type": "block",
+                        "style": "normal",
+                        "asset": null
+                    }],
+                    "tiles": null
+                }, {
+                    "_key": "19325f463367",
+                    "cta": {
+                        "page": {
+                            "_ref": "06d96003-0d01-4959-9e4e-a5c1db1a4c2f",
+                            "_type": "reference"
+                        },
+                        "_key": "0e8769889c73",
+                        "openInNewWindow": null,
+                        "title": null,
+                        "pageName": "Collaborate with us",
+                        "slug": "collaborate-with-us",
+                        "_type": "pageLink"
+                    },
+                    "subtitle": null,
+                    "description": [{
+                        "markDefs": [],
+                        "asset": null,
+                        "children": [{
+                            "marks": [],
+                            "text": "We work with builders from day zero, whether you have an idea or want to work on one of ours.",
+                            "_key": "d7a6a53d09e70",
+                            "_type": "span"
+                        }],
+                        "_type": "block",
+                        "style": "normal",
+                        "_key": "d69b15bebb6a"
+                    }],
+                    "tiles": null
+                }]
+            }],
+            "seo": {
+                "hideFromSitemap": null,
+                "disallowRobots": null,
+                "metaTitle": null,
+                "metaKeywords": null,
+                "openGraphDescription": "Paradigm is a research-driven crypto investment firm that funds companies and protocols from their earliest stages.",
+                "twitterTitle": null,
+                "metaDescription": null,
+                "openGraphTitle": "Paradigm",
+                "openGraphImage": {
+                    "dimensions": {
+                        "_type": "sanity.imageDimensions",
+                        "width": 2400,
+                        "aspectRatio": 1.9047619047619047,
+                        "height": 1260
+                    },
+                    "url": "https://cdn.sanity.io/images/dgybcd83/production/fd732ebeb1c4d286fd7e3b5b25395d72452edeb6-2400x1260.png",
+                    "_type": "image",
+                    "_key": null,
+                    "alt": null,
+                    "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABa0lEQVQokX1Su47CMBD0T9PQU/ML/MBVFCBRUlAgJIQUBQVOPAyBEMgLbOJc7DnZRyAEuI1W2qzXs7OzJqiY0p9Sf7FSb704E0IgCAJ4nmfcdV2QKuAd+HaxGkM9cmmawvd9bDYbrNdrzGYzkGrX8r9UErGMQX8o/NyHUOKpRgPu93vM53NMp1OMx+MHYBVUG1ccw3SI1rmFL/YFJ3MMaFGX5zmSJDEMNeBoNHqM/E4nza7N26gFNdTDOjq8g0QmT/VSSlyvVxyPRyyXSxDd5ZPwZ3lGj/fQiBpoxk0M0gGYZK+6AoatloBcLhcTFMDlTTPBYIUWul4Xfa8PGlOI7KYjXgloI3rdYRiCMWaegR6hKNI56lLY3zZsxwal1OTKeqMiF9lut2ZTu90Oh8MBnPP7YZZl0BNEYYTT6YQoiu4My0DlmKxWKywWC7Mlx3EMW82y2vm/11A2YlkWJpOJcdu2DZMy4Dv7lNeAv2hnUK/yFW33AAAAAElFTkSuQmCC"
+                },
+                "twitterDescription": null,
+                "twitterImage": null
+            },
+            "_id": "2a1fd43a-6d05-4ef1-9619-e30d6a8cbd26"
+        },
+        "__N_SSG": true
+    },
+    "page": "/",
+    "query": {},
+    "buildId": "XlXl8SWWmp9mBFXFCpXAy",
+    "isFallback": false,
+    "dynamicIds": [46296],
+    "gsp": true,
+    "scriptLoader": [{
+        "src": "https://www.googletagmanager.com/gtag/js?id=G-1JXQV4JD0S",
+        "strategy": "afterInteractive"
+    }, {
+        "id": "google-analytics",
+        "strategy": "afterInteractive",
+        "children": "\n      \t\t\t\twindow.dataLayer = window.dataLayer || [];       \t\t\t\tfunction gtag(){window.dataLayer.push(arguments);}       \t\t\t\tgtag('js', new Date());       \t\t\t\tgtag('config', 'G-1JXQV4JD0S');\n      \t\t\t"
+    }]
+}
