@@ -140,18 +140,17 @@
                 transition: background 0.3s ease;
             }
 
-            /* Mục active (Portfolio) có hình vuông màu xanh */
             .mobile-main-menu li.current-menu-item a::before {
-                background: #00ff00; /* Xanh neon */
+                background: linear-gradient(90deg, #060419, #2A0636, #6057CC, #BC38D9);
             }
 
             /* Hiệu ứng hover */
             .mobile-main-menu li a:hover {
-                color: #00ff00; /* Chữ đổi màu xanh neon khi hover */
+                color: #BC38D9; /* Bạn có thể chọn màu chính trong gradient nếu không muốn gradient chữ */
             }
 
             .mobile-main-menu li a:hover::before {
-                background: #00ff00; /* Hình vuông đổi màu xanh neon khi hover */
+                background: linear-gradient(90deg, #060419, #2A0636, #6057CC, #BC38D9);
             }
 
             /* Đảm bảo nội dung phía sau không đè lên menu */

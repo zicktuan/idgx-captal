@@ -149,22 +149,6 @@ class ShortcodeNews extends AbstractShortcode {
                 ),
                 'save_always' => true,
             ),
-            array(
-                'type'        => 'autocomplete',
-                'param_name'  => 'post_list',
-                'heading'     => esc_html__('Select Posts', 'bookawesome'),
-                'description' => esc_html__('Select multiple posts', 'bookawesome'),
-                'settings'    => array(
-                    'multiple'       => true,
-                    'sortable'       => true,
-                    'min_length'     => 1,
-                    'no_hide'        => true,
-                    'unique_values'  => true,
-                    'display_inline' => true,
-                    'values'         => $argsPost,
-                ),
-                'save_always' => true,
-            ),
         );
 
         return array(

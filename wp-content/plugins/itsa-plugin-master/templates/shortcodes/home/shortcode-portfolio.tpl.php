@@ -7,6 +7,22 @@
     .arrow-rotated {
         transform: rotate(180deg) !important;
     }
+    .idgx-link-portfolio:hover {
+        background: linear-gradient(90deg, #060419, #2A0636, #6057CC, #BC38D9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+    .idgx-title-portfolio {
+        background: linear-gradient(90deg, #060419, #2A0636, #6057CC, #BC38D9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        text-shadow: 0 0 10px rgba(188, 56, 217, 0.4);
+    }
 </style>
 <div class="relative min-h-svh">
     <div>
@@ -65,9 +81,18 @@
                 <div class="col-span-12 md:col-span-7 md:col-start-5 xl:col-start-4 max-w-[1000px]">
                     <div class="flex flex-col gap-3 md:gap-4">
                         <div class="flex flex-col gap-1">
-                            <h2 class="font-mono text-mono-12 uppercase font-medium">
+                            <h2 class="idgx-title-portfolio font-mono text-mono-12 uppercase font-medium">
                                 <?php echo !empty($item['title']) ? $item['title']: ''?>
                             </h2>
+                            <?php if (!empty($item['path'])):?>
+                            <div class="grid lg:grid-cols-2">
+                                <div class="rich-text line-break font-mono text-mono-12">
+                                    <a href="<?php echo $item['path']?>" class="idgx-link-portfolio" target="_blank" rel="noopener noreferrer">
+                                        <?php echo $item['path']?>
+                                    </a>
+                                </div>
+                            </div>
+                            <?php endif?>
                             <div class="grid lg:grid-cols-2">
                                 <div class="rich-text line-break font-mono text-mono-12">
                                     <p><?php echo !empty($item['desc']) ? $item['desc']: ''?></p>

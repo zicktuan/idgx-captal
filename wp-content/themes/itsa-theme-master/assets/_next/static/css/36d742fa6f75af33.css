@@ -961,11 +961,15 @@ video {
 .button.button-tag:hover {
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
+    background: linear-gradient(to right, #6057CC, #BC38D9); /* tím xanh -> hồng tím */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .button.button-tag.active,
 .button.button-tag:hover {
-    background-color: rgb(0 225 0 / var(--tw-bg-opacity));
+    background: linear-gradient(to right, #6057CC, #BC38D9); /* tím xanh -> hồng tím */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .button.button-tag-square {
     --tw-bg-opacity: 1;
@@ -2026,7 +2030,8 @@ button.post-summary__image:after {
 }
 .text-dark-green {
     --tw-text-opacity: 1;
-    color: rgb(0 197 0 / var(--tw-text-opacity));
+    /* color: rgb(0 197 0 / var(--tw-text-opacity)); */
+    color: rgb(42 6 54 / var(--tw-text-opacity));
 }
 .text-gray-dark {
     --tw-text-opacity: 1;
@@ -3136,7 +3141,9 @@ textarea.loading * {
     }
     .lg\:text-dark-green {
         --tw-text-opacity: 1;
-        color: rgb(0 197 0 / var(--tw-text-opacity));
+        background: linear-gradient(to right, #6057CC, #BC38D9); /* tím xanh -> hồng tím */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .lg\:underline {
         text-decoration-line: underline;

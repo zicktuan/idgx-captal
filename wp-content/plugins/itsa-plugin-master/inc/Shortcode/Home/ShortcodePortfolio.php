@@ -96,6 +96,11 @@
                             'heading'    => esc_html__('Title', 'bookawesome')
                         ),
                         array(
+                            'type'       => 'textfield',
+                            'param_name' => 'path',
+                            'heading'    => esc_html__('Url part', 'bookawesome')
+                        ),
+                        array(
                             'type'       => 'textarea',
                             'param_name' => 'desc',
                             'heading'    => esc_html__('Description', 'bookawesome')
