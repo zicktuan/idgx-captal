@@ -43,7 +43,6 @@
         <script src="<?php echo get_template_directory_uri() . '/assets/js/_ssgManifest.js'?>" defer=""></script>
         <link as="script" rel="prefetch" href="<?php echo get_template_directory_uri() . '/assets/js/1358-b6def54e6ad0bd04.js'?>">
         <link as="script" rel="prefetch" href="<?php echo get_template_directory_uri() . '/assets/_next/static/team/[slug]-bd9ce1a70a8a1f47.js'?>">
-        
         <style>
             html {
                 scroll-behavior: smooth;

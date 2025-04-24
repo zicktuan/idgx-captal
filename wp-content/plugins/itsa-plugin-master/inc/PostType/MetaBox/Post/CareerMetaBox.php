@@ -4,7 +4,7 @@
 
     use MyPlugin\PostType\MetaBox\AbstractMetaBox;
 
-    class PostMetaBox extends AbstractMetaBox
+    class CareerMetaBox extends AbstractMetaBox
     {
         protected $useOptionTree = true;
 
@@ -21,7 +21,7 @@
                 'id'       => 'awe_post_meta_box',
                 'title'    => __('Post Meta Box', 'bookawesome'),
                 'desc'     => '',
-                'pages'    => array('post'),
+                'pages'    => array('itsa_career_pt'),
                 'context'  => 'normal',
                 'priority' => 'high',
                 'fields'   => [
@@ -31,13 +31,13 @@
                         'type'  => 'tab'
                     ],
                     [
-                        'label' => __('Date time', 'bookawesome'),
-                        'id'    => 'itsa_event_date_time',
+                        'label' => __('Company Name', 'bookawesome'),
+                        'id'    => 'itsa_company_name',
                         'type'  => 'text',
                     ],
                     [
                         'label' => __('Location', 'bookawesome'),
-                        'id'    => 'awe_event_location_meta',
+                        'id'    => 'itsa_localtion',
                         'type'  => 'text',
                     ],
                 ]

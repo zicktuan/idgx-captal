@@ -32,6 +32,8 @@ class AwesomeTheme {
 		add_filter('pre_site_transient_update_themes','remove_core_updates'); 
 		add_filter( 'auto_update_plugin', '__return_false' );
 		add_filter('pre_site_transient_update_plugins','remove_core_updates');
+		add_action('wp_ajax_filter_careers', array($this, 'filter_careers_callback'));
+        add_action('wp_ajax_nopriv_filter_careers', array($this, 'filter_careers_callback'));
 		// Init scripts for theme.
 		$this->AwesomeScripts();
 		$this->includeFunction();
@@ -177,6 +179,108 @@ class AwesomeTheme {
 			wp_send_json_error();
 		}
 
+		wp_die();
+	}
+
+	function filter_careers_callback() {
+	
+		$paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
+		$selectedCategories = isset($_POST['categories']) ? array_map('intval', (array)$_POST['categories']) : [];
+	
+		$args = [
+			'post_type'      => 'itsa_career_pt',
+			'post_status'    => 'publish',
+			'posts_per_page' => 10,
+			'paged'          => $paged,
+		];
+	
+		if (!empty($selectedCategories)) {
+			$args['tax_query'] = [
+				[
+					'taxonomy' => 'career',
+					'field'    => 'term_id',
+					'terms'    => $selectedCategories,
+					'operator' => 'IN',
+				],
+			];
+		}
+	
+		$query = new WP_Query($args);
+	
+		// Debug số bài viết
+		error_log('Found posts: ' . $query->found_posts);
+	
+		ob_start();
+		if ($query->have_posts()) {
+			while ($query->have_posts()) {
+				$query->the_post();
+				$jobTitle = get_the_title();
+				$companyName = get_post_meta(get_the_ID(), 'itsa_company_name', true);
+				$location = get_post_meta(get_the_ID(), 'itsa_localtion', true);
+				?>
+				<div>
+					<div class="grid grid-cols-1 relative">
+						<div class="flex flex-col">
+							<div class="flex flex-row gap-3 md:flex-row-reverse">
+								<div class="flex items-center flex-grow">
+									<div class="flex flex-col gap-half md:gap-1">
+										<p class="font-mono text-mono-18 md:text-mono-24">
+											<a class="link-cover link-underline-hover-large" href="<?php echo esc_url(get_permalink()); ?>" target="_blank">
+												<?php echo esc_html($jobTitle); ?>
+											</a>
+										</p>
+										<div class="flex flex-col md:flex-row gap-half md:gap-1 font-mono text-mono-12">
+											<p class="font-medium"><?php echo esc_html($companyName); ?></p>
+											<?php if (!empty($location)) : ?>
+												<p class="hidden md:flex">|</p>
+												<p><?php echo esc_html($location); ?></p>
+											<?php endif; ?>
+										</div>
+									</div>
+								</div>
+								<div class="flex shrink-0 h-[72px] md:min-h-[88px] aspect-square">
+									<div class="image overflow-hidden block w-full aspect-square max-w-[88px]">
+										<?php if (has_post_thumbnail()) : ?>
+											<?php echo get_the_post_thumbnail(get_the_ID(), 'itsa-thumbnail-1200x600', ['class' => 'w-full h-auto object-cover']); ?>
+										<?php endif; ?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php
+			}
+			wp_reset_postdata();
+		} else {
+			echo '<p class="font-mono text-mono-12">Không tìm thấy bài viết.</p>';
+		}
+	
+		$posts_html = ob_get_clean();
+	
+		ob_start();
+		echo paginate_links([
+			'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+			'format'       => '?paged=%#%',
+			'current'      => max(1, $paged),
+			'total'        => $query->max_num_pages,
+			'prev_text'    => '<svg width="5" height="8" viewBox="0 0 5 8" class="block mx-auto rotate-180"><path d="M0.588432 -3.85672e-07L5 4L0.588431 8L4.66431e-08 7.46647L3.82314 4L6.52739e-07 0.533534L0.588432 -3.85672e-07Z" fill="currentColor"></path></svg>',
+			'next_text'    => '<svg width="5" height="8" viewBox="0 0 5 8" class="block mx-auto"><path d="M0.588432 -3.85672e-07L5 4L0.588431 8L4.66431e-08 7.46647L3.82314 4L6.52739e-07 0.533534L0.588432 -3.85672e-07Z" fill="currentColor"></path></svg>',
+			'before_page_number' => '<span class="block button button-tag">',
+			'after_page_number'  => '</span>',
+			'add_args'     => ['category' => implode(',', $selectedCategories)],
+			'prev_next'    => true,
+			'show_all'     => false,
+			'mid_size'     => 1,
+			'end_size'     => 1,
+		]);
+		$pagination_html = ob_get_clean();
+	
+		wp_send_json_success([
+			'posts' => $posts_html,
+			'pagination' => $pagination_html,
+		]);
+	
 		wp_die();
 	}
 }

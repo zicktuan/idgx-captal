@@ -7,8 +7,9 @@
             $argsAction = [
                 // 'awe_reservation'  => array($this, 'aweReservation'),
                 // 'awe_submit_mess'  => array($this, 'aweSendMess'),
-                // 'wp_ajax_filter_posts'  => array($this, 'filter_posts_callback'),
-                // 'wp_ajax_nopriv_filter_posts'  => array($this, 'filter_posts_callback'),
+                // 'wp_ajax_filter_careers'  => array($this, 'filter_careers_callback'),
+                // 'wp_ajax_nopriv_filter_careers'  => array($this, 'filter_careers_callback'),
+                
             ];
 
             foreach ($argsAction as $key => $value) {

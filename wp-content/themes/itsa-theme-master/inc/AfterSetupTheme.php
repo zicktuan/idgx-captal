@@ -65,6 +65,7 @@ class AfterSetupTheme{
 		add_image_size( 'itsa-thumbnail-278x278', 278, 278, array( 'center', 'center' ) );
 		add_image_size( 'itsa-thumbnail-320x168', 320, 168, array( 'center', 'center' ) );
 		add_image_size('itsa-thumbnail-800x450', 800, 450, true);
+		add_image_size('itsa-thumbnail-1200x600', 1200, 600, true); 
 	}
 
 	public function siteTitle($title){

@@ -2,8 +2,7 @@
 
 namespace MyPlugin\Taxonomies;
 
-use MyPlugin\Taxonomies\ProductsCategoryTaxonomies;
-
+use MyPlugin\Taxonomies\CareerCategoryTaxonomies;
 /**
  * @author lookawesome team
  * @version 1.0
@@ -14,6 +13,6 @@ use MyPlugin\Taxonomies\ProductsCategoryTaxonomies;
 class TaxonomiesInit {
 
 	public function __construct(){
-		new ProductsCategoryTaxonomies();
+		new CareerCategoryTaxonomies();
 	}
 }

@@ -7,6 +7,7 @@ use MyPlugin\Shortcode\Home\ShortcodeAbout;
 use MyPlugin\Shortcode\Home\ShortcodeTeamData;
 use MyPlugin\Shortcode\Home\ShortcodePortfolio;
 use MyPlugin\Shortcode\Home\ShortcodeTeamDetail;
+use MyPlugin\Shortcode\Home\ShortcodeCareer;
 use MyPlugin\Shortcode\ShortcodeNews;
 
 /**
@@ -30,7 +31,7 @@ class ShortcodeInit
 		new ShortcodePortfolio($this);
 		new ShortcodeTeamDetail($this);
 		new ShortcodeNews($this);
-		// new ShortcodeEndContainer($this);
+		new ShortcodeCareer($this);
 		// new ShortcodeAboutBanner($this);
 		// new Service($this);
 		// new ShortcodeServiceDetail($this);
