@@ -132,13 +132,28 @@
                                 ),
                                 array(
                                     'type'       => 'textfield',
+                                    'param_name' => 'title',
+                                    'heading'    => esc_html__('Portfolio title', 'bookawesome')
+                                ),
+                                array(
+                                    'type'       => 'textfield',
                                     'param_name' => 'desc',
                                     'heading'    => esc_html__('Description', 'bookawesome')
                                 ),
                                 array(
                                     'type'       => 'textfield',
-                                    'param_name' => 'url',
-                                    'heading'    => esc_html__('Url', 'bookawesome')
+                                    'param_name' => 'web',
+                                    'heading'    => esc_html__('Url website', 'bookawesome')
+                                ),
+                                array(
+                                    'type'       => 'textfield',
+                                    'param_name' => 'tw',
+                                    'heading'    => esc_html__('Url X', 'bookawesome')
+                                ),
+                                array(
+                                    'type'       => 'textfield',
+                                    'param_name' => 'lkd',
+                                    'heading'    => esc_html__('Url Linkedin', 'bookawesome')
                                 ),
                                 
                             )
