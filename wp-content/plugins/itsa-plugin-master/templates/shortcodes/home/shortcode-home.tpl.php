@@ -1,164 +1,344 @@
-
-<div>
-    <div class="relative min-h-hero flex flex-col justify-center items-center p-4 relative overflow-hidden mt-3 md:mt-2">
-        <div class="relative w-[70vw]" style="max-width: min(626px, 80svh);">
-            <div class="aspect-square w-full relative icon-spiral--animated center-point">
-                <div class="icon-spiral-container--dark">
-                    <div class="icon-spiral-bg--dark icon-spiral-bg--dark--animated"></div>
-                </div>
-                <div class="icon-spiral-container--med">
-                    <div class="icon-spiral-bg--med icon-spiral-bg--med--animated"></div>
-                </div>
-                <div class="icon-spiral-container--light">
-                    <div class="icon-spiral-bg--light icon-spiral-bg--light--animated"></div>
+<div class="relative min-h-hero">
+        <div class="container">
+            <div class="center-point">
+                <div class="x-container">
+                    <div class="x-arm x-arm-1"></div>
+                    <div class="x-arm x-arm-2"></div>
                 </div>
             </div>
+
+            <!-- Các khối nội dung -->
+             <?php if(!empty($listItems[0])): $i = 0;?>
+             <?php foreach($listItems as $item): $i++?>
+                <div>
+                    <div class="content content-<?php echo $i?>">
+                        <div class="content-inner">
+                            <div class="flex items-center gap-1">
+                                <a class="button button-tag" href="<?php echo !empty($item['url']) ? $item['url'] : '#' ?>">
+                                    <?php echo !empty($item['title']) ? $item['title'] : '' ?>
+                                </a>
+                                <svg width="12" height="6" viewBox="0 0 12 6" class="block rotate-180">
+                                    <path d="M0 3L5 5.88675L5 0.113248L0 3ZM12 2.5L4.5 2.5L4.5 3.5L12 3.5L12 2.5Z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <div class="homepage-tag-description">
+                                <p><?php echo !empty($item['desc']) ? $item['desc'] : '' ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             <?php endforeach?>
+             <?php endif?>
         </div>
-        <svg id="dynamic-lines" class="absolute inset-0 z-0 pointer-events-none w-full h-full"></svg>
-        <div class="tag absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
-        <a _key="98a17dad2e1c" class="point-link" href="https://www.paradigm.xyz/oss" data-x="68" data-y="20">
-            <div class="absolute top-[25%] left-[10%] sm:top-[25%] sm:left-[10%] md:top-[30%] md:left-[10%] lg:top-[20%] lg:left-[65%] xl:left-[68%]">
-                <div class="tag absolute top-0 left-0"></div>
-                <div class="relative left-[24px] top-[-4px]">
-                    <div class="w-[60vw] max-w-[340px]">
-                        <div>
-                            <div>
-                                <div class="flex flex-col gap-[8px] relative">
-                                    <div class="flex items-center gap-1">
-                                        <a _key="98a17dad2e1c" class="block button button-tag !bg-gray uppercase link-cover" 
-                                        href="<?php echo !empty($atts['itsa_home_url_2']) ? $atts['itsa_home_url_2'] : '#' ?>">
-                                            <?php echo !empty($atts['itsa_home_title_2']) ? $atts['itsa_home_title_2'] : '' ?>
-                                        </a>
-                                        <svg width="12" height="6" viewBox="0 0 12 6" class="block rotate-180">
-                                            <path d="M0 3L5 5.88675L5 0.113248L0 3ZM12 2.5L4.5 2.5L4.5 3.5L12 3.5L12 2.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="homepage-tag-description text-serif-14 md:text-serif-18 lg:block max-w-[370px] hidden block">
-                                        <p><?php echo !empty($atts['itsa_home_desc_2']) ? $atts['itsa_home_desc_2'] : '' ?></p>
-                                    </div>
-                                    <div class="hidden lg:block">
-                                        <div class="flex gap-1 rounded-6 shrink-0">
-                                            <?php if (!empty($listItems[0])):?>
-                                            <?php foreach ($listItems as $item): ?>
-                                            <a _key="bfbd58f4966b" class="focus:outline-none" target="_blank" rel="noopener noreferrer" href="#">
-                                                <div class="block relative w-9 h-9 border-dashed box-border border hover:border-none border-dark-gray p-[10px] bg-white">
-                                                    <div class="image overflow-hidden w-full h-full block">
-                                                        <picture>
-                                                            <img class="" src="<?php echo !empty($item['image']) ? wp_get_attachment_url($item['image']) : '' ?>">
-                                                        </picture>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <?php endforeach?>
-                                            <?php endif ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a _key="abd15ddaf153" class="point-link" href="https://www.paradigm.xyz/about" data-x="25" data-y="40">
-            <div class="absolute top-[12%] left-[40%] sm:top-[10%] sm:left-[50%] md:top-[15%] md:left-[40%] lg:top-[40%] lg:left-[20%] xl:left-[25%]">
-                <div class="tag absolute top-0 left-0"></div>
-                <div class="relative left-[24px] top-[-4px]">
-                    <div class="w-[50vw] md:w-[60vw] max-w-[218px] md:max-w-[285px] lg:translate-x-[-70%] xl:translate-x-[-95%]">
-                        <div>
-                            <div>
-                                <div class="flex flex-col gap-[8px] relative">
-                                    <div class="flex items-center gap-1">
-                                        <a _key="abd15ddaf153" class="block button button-tag !bg-gray uppercase link-cover" 
-                                        href="<?php echo !empty($atts['itsa_home_url_3']) ? $atts['itsa_home_url_3'] : '' ?>">
-                                            <?php echo !empty($atts['itsa_home_title_1']) ? $atts['itsa_home_title_1'] : '' ?>
-                                        </a>
-                                        <svg width="12" height="6" viewBox="0 0 12 6" class="block rotate-180">
-                                            <path d="M0 3L5 5.88675L5 0.113248L0 3ZM12 2.5L4.5 2.5L4.5 3.5L12 3.5L12 2.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="homepage-tag-description text-serif-14 md:text-serif-18 lg:block max-w-[370px]">
-                                        <p><?php echo !empty($atts['itsa_home_desc_1']) ? $atts['itsa_home_desc_1'] : '' ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a _key="0e8769889c73" class="point-link" href="https://www.paradigm.xyz/collaborate-with-us" data-x="68" data-y="70">
-            <div class="absolute top-[78%] left-[15%] sm:top-[80%] sm:left-[25%] md:top-[78%] md:left-[20%] lg:top-[70%] lg:left-[60%] xl:left-[68%]">
-                <div class="tag absolute top-0 left-0"></div>
-                <div class="relative left-[24px] top-[-4px]">
-                    <div class="w-[60vw] max-w-[210px] md:max-w-[340px]">
-                        <div>
-                            <div>
-                                <div class="flex flex-col gap-[8px] relative">
-                                    <div class="flex items-center gap-1">
-                                        <a _key="0e8769889c73" class="block button button-tag !bg-gray uppercase link-cover" 
-                                        href="<?php echo !empty($atts['itsa_home_url_3']) ? $atts['itsa_home_url_3'] : '#' ?>">
-                                            <?php echo !empty($atts['itsa_home_title_3']) ? $atts['itsa_home_title_3'] : '' ?>
-                                        </a>
-                                        <svg width="12" height="6" viewBox="0 0 12 6" class="block rotate-180">
-                                            <path d="M0 3L5 5.88675L5 0.113248L0 3ZM12 2.5L4.5 2.5L4.5 3.5L12 3.5L12 2.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="homepage-tag-description text-serif-14 md:text-serif-18 lg:block max-w-[370px]">
-                                        <p><?php echo !empty($atts['itsa_home_desc_3']) ? $atts['itsa_home_desc_3'] : '' ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
     </div>
-</div>
-<style>
-   #dynamic-lines line {
-        stroke: black;
-        transition: stroke 0.3s;
-    }
+    <style>
+       
 
-    .square-marker {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    transform: translate(-50%, -50%);
-    transition: background-color 0.3s ease;
-    }
+        html, body {
+            height: 100vh;
+            overflow: auto;
+            /* background: linear-gradient(135deg, #f5e6e6 0%, #e6e9f0 50%, #d7e1ec 100%); */
+            /* background: linear-gradient(
+                135deg,
+                #85d2c4 0%,   
+                #6b81e0 40%, 
+                #c176f4 75%,  
+                #3e0055 100% 
+            );
+            background-blend-mode: overlay; */
+            font-family: Arial, sans-serif;
+        }
+        
 
-    .center-marker {
-    z-index: 10;
-    }
+        /* Thanh điều hướng (Navbar) */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
 
-    /* Hover hiệu ứng */
-    body[data-hover-index="0"] line[data-index="0"],
-    body[data-hover-index="0"] .square-marker[data-index="0"],
-    body[data-hover-index="0"] .center-marker {
-    stroke: #00ff00 !important;
-    background-color: #00ff00 !important;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+        }
 
-    body[data-hover-index="1"] line[data-index="1"],
-    body[data-hover-index="1"] .square-marker[data-index="1"],
-    body[data-hover-index="1"] .center-marker {
-    stroke: #00ff00 !important;
-    background-color: #00ff00 !important;
-    }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
 
-    /* Thêm dòng mới cho từng index nếu bạn có nhiều point-link */
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            font-weight: 500;
+        }
 
+        .nav-links a:hover {
+            color: #a100ff;
+        }
 
-</style>
+        /* Main content */
+        .min-h-hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 80px 20px;
+        }
 
-<script>
+        /* Container chính */
+        .container {
+            position: relative;
+            width: 60vw;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Thay hình tròn bằng đám mây plasma */
+        .center-point {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* Tỷ lệ 1:1 */
+            background: none;
+        }
+
+        .x-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 70%;
+            height: 70%;
+            transform: translate(-50%, -50%);
+        }
+
+        .x-arm {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 6px; /* Độ dày của tia laser */
+            background: linear-gradient(90deg, #ff00ff, #00f0ff, #ff00ff);
+            background-size: 200%;
+            border-radius: 3px;
+            box-shadow: 
+                0 0 10px #ff00ff,
+                0 0 20px #00f0ff,
+                0 0 30px #ff00ff;
+            animation: neonGlow 2s infinite ease-in-out;
+        }
+
+        @keyframes neonGlow {
+            0% {
+                background-position: 0% 50%;
+                box-shadow: 
+                    0 0 10px #ff00ff,
+                    0 0 20px #00f0ff,
+                    0 0 30px #ff00ff;
+            }
+            50% {
+                background-position: 200% 50%;
+                box-shadow: 
+                    0 0 15px #00f0ff,
+                    0 0 25px #ff00ff,
+                    0 0 35px #00f0ff;
+            }
+            100% {
+                background-position: 0% 50%;
+                box-shadow: 
+                    0 0 10px #ff00ff,
+                    0 0 20px #00f0ff,
+                    0 0 30px #ff00ff;
+            }
+        }
+
+        .x-arm-1 {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .x-arm-2 {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        .x-container::after,
+        .center-point::before,
+        .center-point::after,
+        .x-arm::before {
+            display: none;
+        }
+
+        /* Các khối nội dung */
+        .content {
+            position: absolute;
+            width: 60vw;
+            max-width: 340px;
+        }
+
+        .content-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .button-tag {
+            padding: 5px 10px;
+            background-color: #ccc;
+            color: #000;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .button-tag svg {
+            width: 12px;
+            height: 6px;
+        }
+
+        .homepage-tag-description {
+            font-size: 14px;
+            color: #000;
+            line-height: 1.5;
+        }
+
+        .content-1 {
+            top: 24%; left: 133%; transform: translate(-50%, -50%);
+        }
+
+        .content-2 {
+            top: 24%; left: -32%; transform: translate(-50%, -50%);
+        }
+
+        .content-3 {
+            top: 75%; left: -32%; transform: translate(-50%, -50%);
+        }
+
+        .content-4 {
+            top: 75%; left: 133%; transform: translate(-50%, -50%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                width: 70vw;
+                max-width: 400px;
+            }
+
+            .content {
+                max-width: 200px; /* Giảm kích thước nội dung để vừa màn tablet */
+            }
+
+            .content-1 {
+                top: 24%; left: 105%; transform: translate(-50%, -50%);
+            }
+
+            .content-2 {
+                top: 24%; left: -4%; transform: translate(-50%, -50%);
+            }
+
+            .content-3 {
+                top: 75%; left: -4%; transform: translate(-50%, -50%);
+            }
+
+            .content-4 {
+                top: 75%; left: 105%; transform: translate(-50%, -50%);
+            }
+
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .homepage-tag-description {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                width: 80vw;
+                max-width: 350px;
+            }
+
+            /* Chuyển các khối nội dung thành dạng xếp chồng trên mobile */
+            .content {
+                position: static;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px 0;
+                transform: none !important; /* Bỏ transform để xếp chồng */
+            }
+
+            .content-inner {
+                align-items: center;
+                text-align: center;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 90vw;
+                max-width: 300px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .content {
+                max-width: 250px;
+            }
+
+            .button-tag {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+
+            .homepage-tag-description {
+                font-size: 10px;
+            }
+}
+    </style>
+<!-- <script>
     function updateLines() {
         const svg = document.getElementById("dynamic-lines");
-        svg.innerHTML = ""; // Xóa đường cũ
+        svg.innerHTML = ""; // Clear old lines
 
         const svgRect = svg.getBoundingClientRect();
         svg.setAttribute("viewBox", `0 0 ${svgRect.width} ${svgRect.height}`);
@@ -191,21 +371,21 @@
 
             svg.appendChild(line);
 
-            // Gán data-index cho link để dùng cho CSS
+            // Assign data-index for CSS
             link.setAttribute("data-index", index);
         });
     }
 
-    // document.querySelectorAll(".point-link").forEach(link => {
-    //     link.addEventListener("mouseenter", () => {
-    //         const index = link.getAttribute("data-index");
-    //         document.body.setAttribute("data-hover-index", index);
-    //     });
-    //     link.addEventListener("mouseleave", () => {
-    //         document.body.removeAttribute("data-hover-index");
-    //     });
-    // });
+    document.querySelectorAll(".point-link").forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            const index = link.getAttribute("data-index");
+            document.body.setAttribute("data-hover-index", index);
+        });
+        link.addEventListener("mouseleave", () => {
+            document.body.removeAttribute("data-hover-index");
+        });
+    });
 
     document.addEventListener("DOMContentLoaded", updateLines);
     window.addEventListener("resize", updateLines);
-</script>
+</script> -->

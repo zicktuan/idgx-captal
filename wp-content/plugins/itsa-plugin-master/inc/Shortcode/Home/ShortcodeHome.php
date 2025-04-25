@@ -49,63 +49,26 @@
         public function map() {
             $params = array(
                 array(
-                    'type'       => 'textfield',
-                    'param_name' => 'itsa_home_title_1',
-                    'heading'    => esc_html__('Title 1', 'bookawesome')
-                ),
-                array(
-                    'type'       => 'textarea',
-                    'param_name' => 'itsa_home_desc_1',
-                    'heading'    => esc_html__('Description 1', 'bookawesome')
-                ),
-                array(
-                    'type'       => 'textfield',
-                    'param_name' => 'itsa_home_url_1',
-                    'heading'    => esc_html__('Url 1', 'bookawesome')
-                ),
-
-                array(
-                    'type'       => 'textfield',
-                    'param_name' => 'itsa_home_title_2',
-                    'heading'    => esc_html__('Title 2', 'bookawesome')
-                ),
-                array(
-                    'type'       => 'textarea',
-                    'param_name' => 'itsa_home_desc_2',
-                    'heading'    => esc_html__('Description 2', 'bookawesome')
-                ),
-                array(
-                    'type'       => 'textfield',
-                    'param_name' => 'itsa_home_url_2',
-                    'heading'    => esc_html__('Url 2', 'bookawesome')
-                ),
-                array(
                     'type'       => 'param_group',
                     'param_name' => 'items',
                     'heading'    => esc_html__( 'List item', 'bookawesome' ),
                     'params'     => array(
                         array(
-                            'type'       => 'attach_image',
-                            'param_name' => 'image',
-                            'heading'    => esc_html__('Avt', 'bookawesome')
-                        )
+                            'type'       => 'textfield',
+                            'param_name' => 'title',
+                            'heading'    => esc_html__('Title', 'bookawesome')
+                        ),
+                        array(
+                            'type'       => 'textarea',
+                            'param_name' => 'desc',
+                            'heading'    => esc_html__('Description', 'bookawesome')
+                        ),
+                        array(
+                            'type'       => 'textfield',
+                            'param_name' => 'url',
+                            'heading'    => esc_html__('Url', 'bookawesome')
+                        ),
                     )
-                ),
-
-                array(
-                    'type'       => 'textfield',
-                    'param_name' => 'itsa_home_title_3',
-                    'heading'    => esc_html__('Title 3', 'bookawesome')
-                ),
-                array(
-                    'type'       => 'textarea',
-                    'param_name' => 'itsa_home_desc_3',
-                    'heading'    => esc_html__('Description 1', 'bookawesome')
-                ),
-                array(
-                    'type'       => 'textfield',
-                    'param_name' => 'itsa_home_url_3',
-                    'heading'    => esc_html__('Url 3', 'bookawesome')
                 ),
             );
 
