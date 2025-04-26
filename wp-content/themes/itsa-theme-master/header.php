@@ -217,7 +217,7 @@
                         <a class="logo-wrapper col-start-1 block pointer-events-auto" href="<?php echo home_url()?>">
                             <img src="<?php echo $logo?>" alt="Logo" width="140" height="32" class="block logo-img" />
                         </a>
-                        <div class="col-span-6 col-start-5 xl:col-span-5 xl:col-start-4" style="opacity: 1; transform: translateY(0%) translateZ(0px);">
+                        <div class="col-span-6 col-start-5 xl:col-span-6 xl:col-start-4" style="opacity: 1; transform: translateY(0%) translateZ(0px);">
                             <div class="text-black pointer-events-auto px-2 w-fit -mx-3 border border-solid border-gray-neutral !border-transparent">
                                 <?php
                                     wp_nav_menu(

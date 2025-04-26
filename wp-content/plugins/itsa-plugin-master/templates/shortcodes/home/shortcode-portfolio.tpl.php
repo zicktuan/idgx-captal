@@ -126,19 +126,19 @@
                                         </div>
                                     </div>
                                 </a>
-                                <div class="flex flex-col gap-half">
+                                <!-- <div class="flex flex-col gap-half">
                                     <p class="font-mono font-medium uppercase text-mono-12">
                                         <a _key="3f41a6ce9406" class="link-underline-hover" rel="noopener noreferrer" 
-                                        href="<?php echo !empty($value['url']) ? $value['url'] : ''?>">
-                                            <?php echo !empty($value['name']) ? $value['name'] : ''?>
+                                        href="<?php //echo !empty($value['url']) ? $value['url'] : ''?>">
+                                            <?php //echo !empty($value['name']) ? $value['name'] : ''?>
                                         </a>
                                     </p>
                                     <a _key="3f41a6ce9406" class="" rel="noopener noreferrer" href="https://uniswap.org/">
                                         <div class="rich-text line-break font-mono text-mono-12">
-                                            <p><?php echo !empty($value['title']) ? $value['title'] : ''?></p>
+                                            <p><?php //echo !empty($value['title']) ? $value['title'] : ''?></p>
                                         </div>
                                     </a>
-                                </div>
+                                </div> -->
                             </div>
                             <?php endforeach; ?>
                         </div>
@@ -199,8 +199,15 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, #6366f1, #ec4899);
+        /* background: linear-gradient(135deg, #6366f1, #ec4899); */
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ */
+    }
+
+    .image-wrapper:hover {
+        border: 1px solid rgba(128, 128, 128, 0.5); /* Border xám mờ */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+        background: rgba(200, 200, 200, 0.2);
+        border-radius: 30px;
     }
 
     .portfolio-image {
