@@ -5,7 +5,7 @@
                 <div class="flex flex-col gap-3 md:gap-6">
                     <div class="grid grid-cols-6 gap-y-3 min-h-[280px]">
                         <div class="xl:grid col-span-6 xl:col-span-3 xl:col-start-4 xl:row-start-1 xl:max-w-[280px] xl:justify-self-end w-full">
-                            <div class="image overflow-hidden block w-full aspect-square">
+                            <div class="image overflow-hidden block w-full aspect-square img-team-detail">
                                 <picture>
                                     <source srcset="<?php echo !empty($atts['itsa_team_detail_avt']) ? wp_get_attachment_url($atts['itsa_team_detail_avt']) : '' ?>" media="(min-width: 1000px)">
                                     <source srcset="<?php echo !empty($atts['itsa_team_detail_avt']) ? wp_get_attachment_url($atts['itsa_team_detail_avt']) : '' ?>" media="(min-width: 600px)">
@@ -60,3 +60,8 @@
         </div>
     </div>
 </div>
+<style>
+    .img-team-detail {
+        height: -webkit-fill-available !important;
+    }
+</style>
