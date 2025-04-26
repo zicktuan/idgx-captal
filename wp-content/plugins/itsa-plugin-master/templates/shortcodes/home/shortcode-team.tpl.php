@@ -34,17 +34,53 @@
     .arrow-icon:not(.open) {
         transform: rotate(0) !important; /* Mũi tên hướng xuống khi đóng */
     }
+
+    .image-container {
+        width: 100%;
+        height: 250px; /* Chiều cao cố định */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .img-center {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
     @media (max-width: 767px) {
         .team-menu::before {
             content: none;
+        }
+        .img-center {
+            object-fit: contain;
+            width: 100%;
+            height: auto; /* Chiều cao tự động theo tỉ lệ ảnh */
+        }
+
+        .image-container {
+            padding: 20px 0; /* Thêm padding cho đẹp */
         }
     }
     @media (min-width: 768px) and (max-width: 1023px) {
         .team-menu::before {
             content: none;
         }
+        .img-center {
+            object-fit: contain;
+            width: 100%;
+            height: auto; /* Chiều cao tự động theo tỉ lệ ảnh */
+        }
+
+        .image-container {
+            height: -webkit-fill-available;
+            padding: 20px 0; /* Thêm padding cho đẹp */
+        }
     }
 
+    
 </style>
 <div class="relative min-h-svh">
     <div>
@@ -107,11 +143,14 @@
                         <?php if(!empty($listItemsData[0])):?>
                             <?php foreach($listItemsData as $item):?>
                                 <div class="relative flex flex-col gap-1 md:gap-[14px]">
-                                    <div class="w-full aspect-square overflow-hidden">
-                                        <div class="image overflow-hidden block w-full aspect-square select-none">
+                                    <div class="image-container">
+                                        <div class="image-wrapper">
                                             <picture>
-                                                <source srcset="<?php echo !empty($item['img']) ? wp_get_attachment_url($item['img']) : '' ?>" media="(min-width: 600px)">
-                                                <img class="<?php echo !empty($item['img']) ? wp_get_attachment_url($item['img']) : '' ?>" src="">
+                                                <source srcset="<?php echo !empty($item['img']) ? wp_get_attachment_image_src($item['img'], 'medium')[0] : '' ?>" media="(min-width: 600px)">
+                                                <img 
+                                                    src="<?php echo !empty($item['img']) ? wp_get_attachment_image_src($item['img'], 'medium')[0] : '' ?>" 
+                                                    class="img-center"
+                                                >
                                             </picture>
                                         </div>
                                     </div>
@@ -196,11 +235,11 @@
             items.forEach(item => {
                 const memberHTML = `
                     <div class="relative flex flex-col gap-1 md:gap-[14px]">
-                        <div class="w-full aspect-square overflow-hidden">
-                            <div class="image overflow-hidden block w-full aspect-square select-none">
+                        <div class="image-container">
+                            <div class="">
                                 <picture>
                                     <source srcset="${item.img_url || ''}" media="(min-width: 600px)">
-                                    <img src="${item.img_url || ''}" alt="${item.name || ''}">
+                                    <img class="img-center" src="${item.img_url || ''}" alt="${item.name || ''}">
                                 </picture>
                             </div>
                         </div>
