@@ -35,35 +35,39 @@
         transform: rotate(0) !important; /* Mũi tên hướng xuống khi đóng */
     }
 
-    .image-container {
+    .image img {
+        object-position: top !important;
+    } 
+
+    /* .image-container {
         width: 100%;
-        height: 250px; /* Chiều cao cố định */
+        height: 250px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         background: #d2d8dc;
-    }
+    } */
 
-    .img-center {
+    /* .img-center {
         height: 100%;
         object-fit: cover;
         object-position: center;
-    }
+    } */
 
     @media (max-width: 767px) {
         .team-menu::before {
             content: none;
         }
-        .img-center {
+        /* .img-center {
             object-fit: contain;
             width: 100%;
-            height: auto; /* Chiều cao tự động theo tỉ lệ ảnh */
+            height: auto;
         }
 
         .image-container {
-            padding: 20px 0; /* Thêm padding cho đẹp */
-        }
+            padding: 20px 0;
+        } */
         .team-label {
             font-weight: bold;
         }
@@ -72,16 +76,33 @@
         .team-menu::before {
             content: none;
         }
-        .img-center {
+        .team-label {
+            font-weight: bold;
+        }
+        /* .img-center {
             object-fit: contain;
             width: 100%;
-            height: auto; /* Chiều cao tự động theo tỉ lệ ảnh */
+            height: auto;
         }
 
         .image-container {
             height: -webkit-fill-available;
-            padding: 20px 0; /* Thêm padding cho đẹp */
-        }
+            padding: 20px 0;
+        } */
+    }
+
+    .idgx-title-team {
+        background: linear-gradient(90deg, #060419, #2A0636, #6057CC, #BC38D9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        text-shadow: 0 0 10px rgba(188, 56, 217, 0.4);
+    }
+
+    .idgx-content-team {
+        margin-bottom: 60px;
     }
 
     
@@ -89,6 +110,7 @@
 <div class="relative min-h-svh">
     <div>
         <div class="relative min-h-svh">
+            <!-- Menu mobile -->
             <div class="md:hidden sticky top-6 p-[16px] z-10 bg-white">
                 <div class="border border-solid border-gray">
                     <button class="team-toggle block w-full font-mono text-mono-12">
@@ -141,39 +163,7 @@
                     </div>
                 </div>
             </div>
-            <div class="px-container-mobile md:px-container-desktop my-8 md:my-12 lg:my-18 team-container">
-                <div class="grid grid-cols-12 list-item team-grid">
-                    <div class="col-span-12 md:col-span-7 md:col-start-5 xl:col-start-4 max-w-[1000px]">
-                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4">
-                        <?php if(!empty($listItemsData[0])):?>
-                            <?php foreach($listItemsData as $item):?>
-                                <div class="relative flex flex-col gap-1 md:gap-[14px]">
-                                    <div class="image-container">
-                                        <div class="image-wrapper">
-                                            <picture>
-                                                <source srcset="<?php echo !empty($item['img']) ? wp_get_attachment_image_src($item['img'], 'medium')[0] : '' ?>" media="(min-width: 600px)">
-                                                <img 
-                                                    src="<?php echo !empty($item['img']) ? wp_get_attachment_image_src($item['img'], 'medium')[0] : '' ?>" 
-                                                    class="img-center"
-                                                >
-                                            </picture>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-half font-mono text-mono-12">
-                                        <p class="font-medium">
-                                            <a class="link-underline-hover link-cover" href="<?php echo !empty($item['url']) ? $item['url'] : '#'?>">
-                                                <?php echo !empty($item['name']) ? $item['name'] : '' ?>
-                                            </a>
-                                        </p>
-                                        <p><?php echo !empty($item['position']) ? $item['position'] : '' ?></p>
-                                    </div>
-                                </div>
-                            <?php endforeach ?>
-                        <?php endif ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Menu Desktop -->
             <div class="hidden md:block absolute inset-0 pointer-events-none px-container-desktop z-10 h-fit pb-20">
                 <div class="sticky top-12 lg:top-18 md:max-w-[30%] lg:max-w-[22%] pointer-events-auto">
                     <div class="font-mono text-mono-12 flex flex-col gap-1">
@@ -206,13 +196,80 @@
                     </div>
                 </div>
             </div>
+            <div class="px-container-mobile md:px-container-desktop my-8 md:my-12 lg:my-18 team-container">
+                <div class="grid grid-cols-12 list-item team-grid">
+                    <div class="team-wrap col-span-12 md:col-span-7 md:col-start-5 xl:col-start-4 max-w-[1000px]">
+                        <?php if (!empty($listItemsData[0])): ?>
+                            <?php foreach ($listItemsData as $item): ?>
+                                <div class="flex flex-col gap-4 mb-8">
+                                    <h2 class="idgx-title-team font-mono text-mono-12 uppercase font-medium">
+                                        <?php echo !empty($item['title']) ?  esc_html($item['title']) : esc_html($item['selected_menu']); ?>
+                                    </h2>
+                                    <div class="idgx-content-team grid grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4">
+                                        <?php if(!empty($item['sub_items'])):
+                                            $subItems = vc_param_group_parse_atts( $item['sub_items'] );
+                                            if(!empty($subItems[0])):
+                                        ?>
+                                        <?php foreach ($subItems as $value): ?>
+                                            <div class="relative flex flex-col gap-1 md:gap-[14px]">
+                                                <!-- <div class="image-container">
+                                                    <div class="image-wrapper">
+                                                        <picture>
+                                                            <source srcset="<?php echo !empty($value['img']) ? wp_get_attachment_image_src($value['img'], 'medium')[0] : '' ?>" media="(min-width: 600px)">
+                                                            <img 
+                                                                src="<?php echo !empty($value['img']) ? wp_get_attachment_image_src($value['img'], 'medium')[0] : '' ?>" 
+                                                                class="img-center"
+                                                                alt="<?php echo !empty($value['name']) ? esc_attr($value['name']) : ''; ?>"
+                                                            >
+                                                        </picture>
+                                                    </div>
+                                                </div> -->
+
+                                                <div class="w-full aspect-square overflow-hidden">
+                                                    <div class="image overflow-hidden block w-full aspect-square select-none">
+                                                        <picture>
+                                                            <source srcset="<?php echo !empty($value['img']) ? wp_get_attachment_image_src($value['img'], 'medium')[0] : '' ?>" media="(min-width: 600px)">
+                                                            <img class="" src="<?php echo !empty($value['img']) ? wp_get_attachment_image_src($value['img'], 'medium')[0] : '' ?>">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="flex flex-col gap-half font-mono text-mono-12">
+                                                    <p class="font-medium">
+                                                        <a class="link-underline-hover link-cover" href="<?php echo !empty($value['url']) ? esc_url($value['url']) : '#'; ?>">
+                                                            <?php echo !empty($value['name']) ? esc_html($value['name']) : ''; ?>
+                                                        </a>
+                                                    </p>
+                                                    <p><?php echo !empty($value['position']) ? esc_html($value['position']) : ''; ?></p>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                        <?php endif; endif ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>
 <script>
     const teamData = <?php 
         $data_with_urls = array_map(function($item) {
-            $item['img_url'] = !empty($item['img']) ? wp_get_attachment_url($item['img']) : '';
+            if (!empty($item['sub_items'])) {
+                $subItemDataTeam = vc_param_group_parse_atts($item['sub_items']);
+                
+                $item['sub_items'] = array_map(function($subItem) {
+                    $subItem['img_url'] = !empty($subItem['img']) ? wp_get_attachment_url($subItem['img']) : '';
+                    return $subItem;
+                }, $subItemDataTeam);
+                
+                $item['sub_items'] = urlencode(json_encode($item['sub_items']));
+            }
             return $item;
         }, $listItemsData);
         echo json_encode($data_with_urls);
@@ -225,7 +282,8 @@
         }
 
         // Lấy các elements cần thiết
-        const teamGrid = document.querySelector('.team-grid .grid');
+        // const teamGrid = document.querySelector('.team-grid .grid');
+        const teamGrid = document.querySelector('.team-wrap');
         const menuButtons = document.querySelectorAll('.team-menu, .link-tag-push');
 
         const teamToggle = document.querySelector('.team-toggle');
@@ -239,32 +297,50 @@
             teamGrid.innerHTML = ''; // Xóa nội dung hiện tại
             
             items.forEach(item => {
-                const memberHTML = `
+
+                const subItems = JSON.parse(decodeURIComponent(item.sub_items));
+                let subItemsHtml = subItems.map(value => `
                     <div class="relative flex flex-col gap-1 md:gap-[14px]">
                         <div class="image-container">
-                            <div class="">
+                            <div class="image-wrapper">
                                 <picture>
-                                    <source srcset="${item.img_url || ''}" media="(min-width: 600px)">
-                                    <img class="img-center" src="${item.img_url || ''}" alt="${item.name || ''}">
+                                    <source srcset="${value.img_url || ''}" media="(min-width: 600px)">
+                                    <img 
+                                        src="${value.img_url || ''}" 
+                                        class="img-center"
+                                        alt="${value.name ? value.name.replace(/"/g, '&quot;') : ''}"
+                                    >
                                 </picture>
                             </div>
                         </div>
                         <div class="flex flex-col gap-half font-mono text-mono-12">
                             <p class="font-medium">
-                                <a class="link-underline-hover link-cover" href="${item.url || '#'}">
-                                    ${item.name || ''}
+                                <a class="link-underline-hover link-cover" href="${value.url || '#'}">
+                                    ${value.name ? value.name.replace(/\+/g, ' ') : ''}
                                 </a>
                             </p>
-                            <p>${item.position || ''}</p>
+                            <p>${value.position ? value.position.replace(/\+/g, ' ') : ''}</p>
                         </div>
                     </div>
+                `).join('');
+
+                let title = (item.title === '' || item.title == null) ? item.selected_menu : item.title
+                teamGrid.innerHTML  += `
+                    <div class="flex flex-col gap-4 mb-8">
+                        <h2 class="idgx-title-team font-mono text-mono-12 uppercase font-medium">
+                            ${title}
+                        </h2>
+                        <div class="idgx-content-team grid grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4">
+                            ${subItemsHtml}
+                        </div>
+                        
+                    </div>
                 `;
-                teamGrid.insertAdjacentHTML('beforeend', memberHTML);
             });
         }
 
         // Hiển thị tất cả members khi load trang
-        renderTeamMembers(teamData);
+        // renderTeamMembers(teamData);
 
         // Toggle dropdown khi click vào button "Team"
         if (teamToggle && dropdownContent && arrowIcon && teamLabel) {
@@ -309,7 +385,7 @@
                 } else {
                     filteredData = teamData.filter(item => 
                         item.selected_menu === menuText || 
-                        (typeof item.selected_menu === 'string' && item.selected_menu.startsWith(menuText))
+                        item.selected_menu.startsWith(menuText)
                     );
                 }
 
