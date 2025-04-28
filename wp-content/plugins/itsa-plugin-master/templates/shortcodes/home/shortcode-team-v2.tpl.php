@@ -301,15 +301,12 @@
                 const subItems = JSON.parse(decodeURIComponent(item.sub_items));
                 let subItemsHtml = subItems.map(value => `
                     <div class="relative flex flex-col gap-1 md:gap-[14px]">
-                        <div class="image-container">
-                            <div class="image-wrapper">
+                        <div class="w-full aspect-square overflow-hidden">
+                            <div class="image overflow-hidden block w-full aspect-square select-none">
                                 <picture>
                                     <source srcset="${value.img_url || ''}" media="(min-width: 600px)">
-                                    <img 
-                                        src="${value.img_url || ''}" 
-                                        class="img-center"
-                                        alt="${value.name ? value.name.replace(/"/g, '&quot;') : ''}"
-                                    >
+                                    <img class="" src="${value.img_url || ''}">
+                                    alt="${value.name ? value.name.replace(/"/g, '&quot;') : ''}"
                                 </picture>
                             </div>
                         </div>
