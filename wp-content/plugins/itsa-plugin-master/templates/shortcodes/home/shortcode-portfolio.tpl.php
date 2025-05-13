@@ -88,7 +88,7 @@
                             <div class="grid lg:grid-cols-2">
                                 <div class="rich-text line-break font-mono text-mono-12">
                                     Explore more
-                                    <a href="<?php echo $item['path']?>" class="idgx-link-portfolio" target="_blank rel="noopener noreferrer">
+                                    <a href="<?php echo $item['path']?>" class="idgx-link-portfolio" target="_blank" rel="noopener noreferrer">
                                         here. 
                                     </a>
                                 </div>
@@ -157,6 +157,9 @@
                 Web3 enthusiasts with a can-do <br/>
                 attitude are wanted to join our team.
             </div>
+            <!-- <button class="talk-button">
+                Talk with us
+            </button> -->
         </div>
     </div>
     <div id="portfolioPopup" class="popup-overlay">
@@ -344,6 +347,25 @@
 .popup-description p {
     margin: 0;
 }
+.talk-button {
+    padding: 12px 32px;
+    margin-top: 30px;  
+    border-radius: 25px;  
+    background: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'monospace', sans-serif;
+    color: #9D1B25; /* màu đỏ sẫm như hình */
+    border: 2px solid;
+    border-image-slice: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .talk-button:hover {
+    background: linear-gradient(to right, #D7402B, #2A6EDC);
+    color: white;
+  }
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", function () {

@@ -115,52 +115,34 @@
             background: none;
         }
 
-        .x-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 70%;
-            height: 70%;
-            transform: translate(-50%, -50%);
-        }
-
         .x-arm {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100%;
-            height: 6px; /* Độ dày của tia laser */
-            background: linear-gradient(90deg, #ff00ff, #00f0ff, #ff00ff);
-            background-size: 200%;
-            border-radius: 3px;
-            box-shadow: 
-                0 0 10px #ff00ff,
-                0 0 20px #00f0ff,
-                0 0 30px #ff00ff;
-            animation: neonGlow 2s infinite ease-in-out;
+            width: 140%;
+            height: 4px;
+            background: linear-gradient(
+                to right,
+                transparent,
+                #ff00ff,
+                #00f0ff,
+                transparent
+            );
+            border-radius: 2px;
+            transform-origin: center;
+            animation: laserPulse 2s infinite ease-in-out;
+            filter: blur(1px);
+            
         }
 
-        @keyframes neonGlow {
-            0% {
-                background-position: 0% 50%;
-                box-shadow: 
-                    0 0 10px #ff00ff,
-                    0 0 20px #00f0ff,
-                    0 0 30px #ff00ff;
+        @keyframes laserPulse {
+            0%, 100% {
+                opacity: 0.8;
+                filter: blur(1px);
             }
             50% {
-                background-position: 200% 50%;
-                box-shadow: 
-                    0 0 15px #00f0ff,
-                    0 0 25px #ff00ff,
-                    0 0 35px #00f0ff;
-            }
-            100% {
-                background-position: 0% 50%;
-                box-shadow: 
-                    0 0 10px #ff00ff,
-                    0 0 20px #00f0ff,
-                    0 0 30px #ff00ff;
+                opacity: 1;
+                filter: blur(2px);
             }
         }
 
@@ -170,13 +152,6 @@
 
         .x-arm-2 {
             transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
-        .x-container::after,
-        .center-point::before,
-        .center-point::after,
-        .x-arm::before {
-            display: none;
         }
 
         /* Các khối nội dung */

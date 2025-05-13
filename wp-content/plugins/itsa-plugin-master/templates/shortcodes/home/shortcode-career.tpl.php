@@ -20,6 +20,17 @@
     $query = new WP_Query($args);
     
 ?>
+<style>
+    .idgx-title-cat {
+        background: linear-gradient(90deg, #060419, #2A0636, #6057CC, #BC38D9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        text-shadow: 0 0 10px rgba(188, 56, 217, 0.4);
+    }
+</style>
 <div class="px-container-mobile md:px-container-desktop my-10 md:my-12 lg:my-18 min-h-svh">
     <div class="grid grid-cols-12 gap-y-4">
         <div class="col-span-12 md:col-span-3 md:pr-4">
@@ -33,6 +44,18 @@
                     </p>
                 </div>
                 <div class="flex flex-col gap-1 font-mono text-mono-12">
+                    <?php 
+                        $term = get_term_by('slug', 'idgx', 'career');
+                        $idgxId = $term ? $term->term_id : 0;
+                    ?>
+                    <ul class="flex flex-col">
+                        <li class="pb-2">
+                            <a class="link-tag-fill flex gap-half items-start" href="#" data-id="<?php echo $idgxId; ?>">
+                                <span class="block tag shrink-0 mt-[3px]"></span>
+                                <span class="block idgx-title-cat">Careers at IDGX</span>
+                            </a>
+                        </li>
+                    </ul>
                     <h2>Roles</h2>
                     <ul class="flex flex-col gap-1">
                         <?php if (!empty($categoriesList)): ?>

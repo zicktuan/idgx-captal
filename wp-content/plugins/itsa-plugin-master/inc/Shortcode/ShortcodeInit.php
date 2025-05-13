@@ -10,6 +10,7 @@ use MyPlugin\Shortcode\Home\ShortcodeTeamDetail;
 use MyPlugin\Shortcode\Home\ShortcodeCareer;
 use MyPlugin\Shortcode\ShortcodeNews;
 use MyPlugin\Shortcode\Home\ShortcodeTeamV2;
+// use MyPlugin\Shortcode\ShortcodeFormRegister;
 
 /**
  * @author lookawesome team
@@ -34,7 +35,7 @@ class ShortcodeInit
 		new ShortcodeNews($this);
 		new ShortcodeCareer($this);
 		new ShortcodeTeamV2($this);
-		// new Service($this);
+		// new ShortcodeFormRegister($this);
 		// new ShortcodeServiceDetail($this);
 		// new ShortcodeContact($this);
 	}
