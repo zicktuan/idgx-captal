@@ -61,26 +61,26 @@
     </div>
 </div>
 <style>
-    .img-team-detail {
+    .img-team-detail img {
         width: 100%;
         height: 400px; /* Chiều cao mặc định cho desktop */
         object-fit: cover; /* Lấp đầy container, cắt phần thừa */
-        object-position: center; /* Căn giữa hình ảnh */
+        object-position: top; /* Căn giữa hình ảnh */
         display: block; /* Loại bỏ khoảng trống dưới ảnh */
         transition: transform 0.3s ease; /* Hiệu ứng mượt khi hover */
     }
     @media (max-width: 767px) {
-        .img-team-detail {
+        .img-team-detail img {
             height: 500px; /* Giảm chiều cao cho mobile */
             object-fit: cover; /* Lấp đầy container */
-            object-position: center;
+            object-position: top !important;
         }
     }
     @media (min-width: 768px) and (max-width: 1023px) {
-        .img-team-detail {
+        .img-team-detail img {
             height: 100%; /* Giảm chiều cao cho mobile */
             object-fit: cover; /* Lấp đầy container */
-            object-position: center;
+            object-position: top !important;
             margin-bottom: 30%;
         }
         .images {
