@@ -130,19 +130,52 @@
             );
             border-radius: 2px;
             transform-origin: center;
-            animation: laserPulse 2s infinite ease-in-out;
-            filter: blur(1px);
+            animation: colorFlow 2.5s linear infinite;
+            transform: translate(-50%, -50%) rotate(45deg);
             
         }
 
-        @keyframes laserPulse {
-            0%, 100% {
-                opacity: 0.8;
-                filter: blur(1px);
+        .x-arm::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20%;
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(255, 255, 255, 0.9),
+                transparent
+            );
+            animation: laserGlint 2s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes laserGlint {
+            0% {
+                left: -20%;
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
             }
             50% {
-                opacity: 1;
-                filter: blur(2px);
+                left: 100%;
+                opacity: 0;
+            }
+            100% {
+                left: 100%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes colorFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
             }
         }
 
